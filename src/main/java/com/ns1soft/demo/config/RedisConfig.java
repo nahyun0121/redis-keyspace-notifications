@@ -40,7 +40,7 @@ public class RedisConfig {
     // 실제 메시지 처리 로직을 포함한 컴포넌트
     @Bean
     MessageListenerAdapter listenerAdapter(MessageSubscriber subscriber) {
-        return new MessageListenerAdapter(subscriber);
+        return new MessageListenerAdapter(subscriber, "onMessage");
     }
 
 }

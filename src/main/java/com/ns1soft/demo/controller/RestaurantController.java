@@ -14,7 +14,7 @@ public class RestaurantController {
     private RestaurantService restaurantService;
 
     @PostMapping("/saveOrUpdate")
-    public String saveOrUpdateRestaurant(@RequestParam String restaurantId, @RequestBody Map<String, String> restaurantInfo) {
+    public String saveOrUpdateRestaurant(@RequestParam String restaurantId, @RequestBody Map<String, Object> restaurantInfo) {
         restaurantService.saveOrUpdateRestaurant(restaurantId, restaurantInfo);
         return "식당 정보 저장/업데이트 됨 !!!";
     }
